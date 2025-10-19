@@ -1,0 +1,31 @@
+[project]
+name = "audio"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "flowerwine",email = "2914518090@qq.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-whisper (>=20250625,<20250626)",
+    "whisper (>=1.1.10,<2.0.0)",
+    "fastapi (>=0.119.0,<0.120.0)",
+    "uvicorn[standard] (>=0.38.0,<0.39.0)",
+    "numpy (>=2.3.4,<3.0.0)",
+    "python-multipart (>=0.0.20,<0.0.21)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+[tool.poetry.group.dev.dependencies]
+httpx = "^0.28.1"
+
